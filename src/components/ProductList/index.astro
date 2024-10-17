@@ -12,7 +12,7 @@ import truncateText from "../../utils/truncateText.js";
       {
         productData.map((product, index) => (
           <div class="max-w-[300px] aspect-square bg-white border border-gray-200 rounded-lg shadow">
-            <a href={`product/${index}${product.title}`}>
+            <a href={`product?id=${index}`}>
               <img
                 class="rounded-t-lg object-cover w-full"
                 src={product.image}
@@ -20,7 +20,7 @@ import truncateText from "../../utils/truncateText.js";
               />
             </a>
             <div class="p-3">
-              <a href={`product/${index}${product.title}`}>
+              <a href={`product?id=${index}`}>
                 <p class="price-title-font-size text-gray-700">
                   {formatPrice(product.price)}
                 </p>
