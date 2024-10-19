@@ -11,6 +11,9 @@ export default {
         "dark-base": "#111827",
         "light-base": "#f9fafb",
       },
+      fontFamily: {
+        poppins: "Poppins",
+      },
     },
   },
   plugins: [],
