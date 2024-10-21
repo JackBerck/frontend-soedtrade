@@ -1,0 +1,48 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import CategoryAndSearch from "../../components/CategoryAndSearch/index.astro";
+import productData from "../../data/_productData.js";
+import formatPrice from "../../utils/formatPrice.js";
+import truncateText from "../../utils/truncateText.js";
+---
+
+<Layout title="Produk Tersimpan">
+  <div class="pt-24 pb-8 section-padding-x">
+    <div class="container max-w-screen-xl">
+      <h1 class="text-2xl font-semibold text-dark-base mb-4">
+        Barang Tersimpan
+      </h1>
+      <CategoryAndSearch />
+      <div
+        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-between"
+      >
+        {
+          productData.map((product, index) => (
+            <div class="max-w-[300px] aspect-square bg-white border border-gray-200 rounded-lg shadow">
+              <a href={`product?id=${index}`}>
+                <img
+                  class="rounded-t-lg object-cover w-full"
+                  src={product.image}
+                  alt={`${product.title} foto`}
+                />
+              </a>
+              <div class="p-3">
+                <a href={`product?id=${index}`}>
+                  <p class="price-title-font-size text-gray-700">
+                    {formatPrice(product.price)}
+                  </p>
+                  <h5 class="mb-2 card-title-font-size font-bold tracking-tight text-dark-base">
+                    {product.title}
+                  </h5>
+                </a>
+                <p class="description-font-size font-normal text-gray-700">
+                  {truncateText(product.description, 7)}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</Layout>
