@@ -25,10 +25,13 @@ import AsideLink from "./AsideLink.astro";
 >
   <div class="sticky flex flex-col gap-2 text-sm">
     <h2 class="pl-3 mb-4 text-2xl font-semibold">Settings</h2>
-    <AsideLink href="profile"> Pengaturan Akun </AsideLink>
-    <AsideLink href="produk-tersimpan"> Barang Tersimpan </AsideLink>
-    <AsideLink href="kelola-produk"> Kelola Produk </AsideLink>
-    <AsideLink href="keluar" addClass="bg-red-600 text-light-base rounded-lg">
+    <AsideLink href="/profile"> Pengaturan Akun </AsideLink>
+    <AsideLink href="profile/produk-tersimpan"> Barang Tersimpan </AsideLink>
+    <AsideLink href="/profile/kelola-produk"> Kelola Produk </AsideLink>
+    <AsideLink
+      href="/profile/keluar"
+      addClass="bg-red-600 text-light-base rounded-lg"
+    >
       Keluar
     </AsideLink>
   </div>
