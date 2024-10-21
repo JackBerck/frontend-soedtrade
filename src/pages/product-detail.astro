@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ProductDetailImages from "../components/ProductDetail/ProductImages/index.astro";
+import ProductDetailHeader from "../components/ProductDetail/ProductHeader/index.astro";
+// import ProdcutDetailDescription from "../components/ProductDetail/ProductDescription/index.astro";
+---
+
+<Layout title="Detail Produk">
+  <main
+    id="detail-product"
+    class="pt-16 w-full flex justify-between flex-col md:flex-row"
+  >
+    <ProductDetailImages />
+    <ProductDetailHeader />
+    <!-- <ProdcutDetailDescription /> -->
+  </main>
+</Layout>
